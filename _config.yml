@@ -1,0 +1,24 @@
+title: Battle of the {Brain-Model-Mapping} Metrics (BotBM3)
+description: Community Event @ Cognitive Computational Neuroscience (CCN2024)
+
+timezone: US/Eastern
+
+navigation:
+  Overview: "/"
+  Schedule: "/schedule"
+  Speakers: "/speakers"
+  What is BotBM3?: "/whatisthis"
+
+markdown: kramdown
+
+github:
+  repository: https://github.com/BotBM3
+
+kramdown:
+  parse_span_html: true
+  parse_block_html: true
+
+plugins:
+  - jekyll-seo-tag
+
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock']
