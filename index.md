@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Overview
+title: BotBM3 @ CCN
 ---
 
 # Overview
@@ -10,7 +10,7 @@ title: Overview
 
 # Question
 
-What do we want from our model-to-brain mapping metrics and how do we get it?
+**What do we want from our model-to-brain mapping metrics and how do we get it?**
 
 # Abstract
 

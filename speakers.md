@@ -15,21 +15,23 @@ We are excited to host the following (confirmed) speakers at this event. (Other 
 
 "Metrics" Blitz
 
-- Jenelle Feathers (FlatIron)
+- Jenelle Feather (FlatIron)
+- Niko Kreigeskorte (Columbia)
 
 # (Tentative) Speakers
 
-Drawing from the larger BotBM3 team, other speakers may (pending scheduling) include:
+Drawing from the larger BotBM3 team, other speakers may (pending availability) include:
 
 - Meenakshi Kholsa (UCSD)
 - Noga Zaslavsky (NYU)
-- Wenxuan Guo (Columbia)
 - Nina Miolane (UCSB)
 - Eghbal Hosseini (MIT)
 - Imran Thobani (Stanford)
-- Abdul Canatar (Columbia)
+- Abdul Canatar (FlatIron)
 - Binxu Wang (Harvard)
 - Brian Cheung (MIT)
+- Chris Z. Wang (MIT)
 - Jacob Prince (Harvard)
 - Francisco Acosta (UCSB)
 - Lotem Elber-Dorezko (CMU)
+- Vighnesh Subramniam (MIT)
