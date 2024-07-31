@@ -6,7 +6,7 @@ timezone: US/Eastern
 navigation:
   Overview: "/"
   Schedule: "/schedule"
-  Speakers: "/speakers"
+  Talk Series: "/talkseries"
   What is BotBM3?: "/whatisthis"
 
 markdown: kramdown
@@ -21,4 +21,6 @@ kramdown:
 plugins:
   - jekyll-seo-tag
 
-exclude: ['README.md', 'Gemfile', 'Gemfile.lock']
+destination: _website/
+
+exclude: ['setup', 'code', '*draft', '*xylo', 'README.md', 'Gemfile', 'Gemfile.lock']

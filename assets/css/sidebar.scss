@@ -1,0 +1,425 @@
+---
+---
+
+@import "xevariables";
+@import "jekyll-cayman";
+
+.logo-container {
+	margin: auto;
+	width: 25%;
+	margin-top: 1.75rem;
+}
+
+.main-content {
+	text-align: justify;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		font-weight: bold;
+		color: $section-headings-color;
+	}
+}
+
+.main-content-layout {
+	display: flex;
+	gap: 2rem;
+	align-items: flex-start;
+}
+
+// page content styling -----------------
+
+.outline-flow {
+	// Version 1: Progressive padding
+	&-v1 {
+		$indent-values: (
+			h1: 0px,
+			h2: 10px,
+			h3: 20px,
+			h4: 30px,
+			h5: 40px,
+			h6: 50px
+		); // Map header tags to indent values
+
+		@each $header, $indent in $indent-values {
+			#{$header} {
+				padding-left: $indent;
+
+				& + * {
+					padding-left: $indent;
+
+					// Apply the indent to all following elements until the next header
+					& ~ *:not(h1, h2, h3, h4, h5, h6) {
+						padding-left: $indent;
+					}
+
+					// Reset padding for elements following a header
+					@each $reset-header, $reset-indent in $indent-values {
+						& ~ #{$reset-header} {
+							padding-left: $reset-indent;
+
+							& ~ * {
+								padding-left: $reset-indent;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&-v1x {
+		$indent-values: (
+			h1: 0px,
+			h2: 10px,
+			h3: 20px,
+			h4: 30px,
+			h5: 40px,
+			h6: 50px
+		); // Map header tags to indent values
+
+		@each $header, $indent in $indent-values {
+			#{$header} {
+				padding-left: $indent;
+
+				// This targets all following siblings until another header, regardless of their types
+				& ~ * {
+					// Applies the indentation until another header interrupts
+					@if $header == h1 {
+						padding-left: $indent;
+						& ~ h2,
+						& ~ h3,
+						& ~ h4,
+						& ~ h5,
+						& ~ h6 {
+							padding-left: map-get($indent-values, h2);
+						}
+					} @else if $header == h2 {
+						padding-left: $indent;
+						& ~ h3,
+						& ~ h4,
+						& ~ h5,
+						& ~ h6 {
+							padding-left: map-get($indent-values, h3);
+						}
+					} @else if $header == h3 {
+						padding-left: $indent;
+						& ~ h4,
+						& ~ h5,
+						& ~ h6 {
+							padding-left: map-get($indent-values, h4);
+						}
+					} @else if $header == h4 {
+						padding-left: $indent;
+						& ~ h5,
+						& ~ h6 {
+							padding-left: map-get($indent-values, h5);
+						}
+					} @else if $header == h5 {
+						padding-left: $indent;
+						& ~ h6 {
+							padding-left: map-get($indent-values, h6);
+						}
+					} @else {
+						padding-left: $indent; // h6 or lower doesn't reset below itself
+					}
+				}
+			}
+		}
+	}
+
+	&-v1y {
+		$indent-values: (
+			h1: 0px,
+			h2: 10px,
+			h3: 20px,
+			h4: 30px,
+			h5: 40px,
+			h6: 50px
+		); // Define indent values for each header
+
+		@each $header, $indent in $indent-values {
+			#{$header} {
+				padding-left: $indent; // Set the initial padding for each header
+
+				// Apply padding to all subsequent siblings until another header of equal or higher rank is found
+				& + * {
+					padding-left: $indent; // Apply same padding to immediate sibling
+					// Inherit padding for all subsequent siblings until a new header is found
+					& ~ * {
+						padding-left: inherit;
+					}
+				}
+			}
+
+			// Reset padding for subsequent headers, ensuring only siblings inherit the intended indent
+			@each $reset-header, $reset-indent in $indent-values {
+				#{$header} ~ #{$reset-header} {
+					padding-left: $reset-indent;
+					& + * {
+						padding-left: inherit; // Siblings of this new header inherit its indent
+					}
+				}
+			}
+		}
+	}
+
+	// Version 2: Color per level
+	&-v2 {
+		h1 {
+			color: #ff6347;
+		}
+
+		h2 {
+			color: #4682b4;
+		}
+
+		h3 {
+			color: #32cd32;
+		}
+
+		h4 {
+			color: #da70d6;
+		}
+
+		h5 {
+			color: #ffd700;
+		}
+
+		h6 {
+			color: #40e0d0;
+		}
+	}
+
+	// Version 3: Background gradient per level
+	&-v3 {
+		h1 {
+			background: linear-gradient(to right, #fff, #ff6347);
+		}
+
+		h2 {
+			background: linear-gradient(to right, #fff, #4682b4);
+		}
+
+		h3 {
+			background: linear-gradient(to right, #fff, #32cd32);
+		}
+
+		h4 {
+			background: linear-gradient(to right, #fff, #da70d6);
+		}
+
+		h5 {
+			background: linear-gradient(to right, #fff, #ffd700);
+		}
+
+		h6 {
+			background: linear-gradient(to right, #fff, #40e0d0);
+		}
+	}
+
+	// Version 4: Hover animation
+	&-v4 {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			transition: padding-left 0.3s ease;
+
+			&:hover {
+				padding-left: 0px + 10px;
+			}
+
+			// Assuming $base-padding is defined
+		}
+	}
+}
+
+// page header styling ------------------
+
+.page-header {
+	color: $header-heading-color;
+	text-align: center;
+
+	background-color: $header-bg-color;
+	background-image: url("../images/banner.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-blend-mode: darken;
+
+	@include large {
+		padding: 2.5rem 2rem;
+	}
+
+	@include medium {
+		padding: 2rem 2rem;
+	}
+
+	@include small {
+		padding: 2rem 1rem;
+	}
+}
+
+// table styling --------------------
+
+.center-table {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	table {
+		margin: 0 auto;
+		width: 90%;
+	}
+
+	td {
+		vertical-align: top;
+		text-align: center;
+	}
+
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+// sidebar styling ------------------
+
+.sidebar {
+	width: auto;
+	max-width: 250px;
+	min-width: 150px;
+	margin-left: -125px;
+	flex-shrink: 0;
+	position: sticky;
+	top: 2rem;
+	align-self: flex-start;
+	max-height: calc(100vh - 4rem);
+	overflow-y: auto;
+	padding-right: 1rem;
+	margin-right: 1rem;
+}
+
+.main-content-inner {
+	flex: 1;
+	min-width: 0;
+}
+
+.sidebar ul {
+	list-style-type: none;
+	padding-left: 0;
+	margin-top: 0;
+}
+
+.sidebar > ul > li:first-child {
+	font-weight: bold;
+	font-style: italic;
+	margin-bottom: 0.5rem;
+}
+
+.sidebar ul ul {
+	padding-left: 0.33rem;
+}
+
+.sidebar li:last-child {
+	margin-bottom: 0.5rem;
+}
+
+.sidebar a {
+	text-decoration: none;
+	color: $body-link-color;
+	font-size: 0.8em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+}
+
+/* 2nd-level headings */
+.sidebar > ul > li > a {
+	font-weight: bold;
+	margin-bottom: 0.5rem; 
+}
+
+/* General style for links that can toggle visibility */
+.sidebar li.toggle-item > a {
+	cursor: pointer;
+	position: relative;
+}
+
+/* Icon indicating collapsible item is collapsed */
+.sidebar li.toggle-item > a::before {
+	content: "▶";
+	position: absolute;
+	left: -1.5em;
+}
+
+/* Icon change when item is expanded */
+.sidebar li.toggle-item.expanded > a::before {
+	content: "▼";
+}
+
+/* Hide all nested lists within toggle items initially, but do not affect others */
+.sidebar li.toggle-item ul {
+	display: none;
+}
+
+/* Only display nested lists within expanded toggle items */
+.sidebar li.toggle-item.expanded > ul {
+	display: block;
+}
+
+// footer styling ------------------
+
+.site-footer-plus {
+	flex-shrink: 0;
+	padding: 2rem 0;
+	margin-top: 0.5rem;
+}
+
+.site-footer .site-footer-credits {
+	display: block !important;
+	text-align: center !important;
+}
+
+// Responsive adjustments -------------
+
+@media screen and (max-width: 64rem) {
+	.main-content {
+		padding: 2rem 2rem;
+	}
+
+	.sidebar {
+		display: none;
+	}
+
+	.main-content-layout {
+		flex-direction: column;
+	}
+}
+
+// New media query to hide sidebar
+@media screen and (max-width: 48rem) {
+	.main-content-layout {
+		display: block;
+	}
+
+	.main-content-inner {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 36rem) {
+	.main-content {
+		padding: 2rem 1rem;
+	}
+}

@@ -1,6 +1,8 @@
 # Local Development #
 ###################
 _site/*
+draft/*
+_website/*
 
 # Jekyll + Ruby #
 ###################

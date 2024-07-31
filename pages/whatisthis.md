@@ -1,11 +1,12 @@
 ---
 layout: default
 title: What is This?
+permalink: /whatisthis.html
 ---
 
 # Under Construction, More Soon!
 
-Many more details about the CCN2024 Event (including speakers, talks, and scheduling details) and the larger BotBM3 collaboration will be posted here soon! Stay tuned.
+Many more details about the CCN2024 Event and the larger BotBM3 collaboration will be posted here soon! Stay tuned.
 
 ## Narrative Event Outline
 
@@ -25,36 +26,37 @@ A central premise of this event and the larger BotBM3 collaboration is that this
 - Seda Akbiyik (Harvard)
 - Talia Konkle (Harvard)
 - Dan Yamins (Stanford)
+- Jacob Prince (Harvard)
 - Meenakshi Kholsa (UCSD)
 - Noga Zaslavsky (NYU)
 - Wenxuan Guo (Columbia)
 - Nina Miolane (UCSB)
 - Eghbal Hosseini (MIT)
 - Imran Thobani (Stanford)
-- Abdul Canatar (Columbia)
+- Abdul Canatar (FlatIron)
 - Binxu Wang (Harvard)
 - Brian Cheung (MIT)
 - Andrei Barbu (MIT)
 - Chris Z. Wang (MIT)
-- Jacob Prince (Harvard)
 - Francisco Acosta (UCSB)
 - Lotem Elber-Dorezko (CMU)
 - Vighnesh Subramniam (MIT)
 
 And a special thanks to the scientist-programmers whose work inspired or directly facilitated our "empirical assay":
 
-- Imran Thobani (Stanford)
 - Jacob Prince (Harvard)
+- Imran Thobani (Stanford)
 - Alex Williams+ (NYU)
 - Nina Miolane+ (UCSB)
 - Eric Elmoznino (MILA)
+- Nathan Cloos+ (MIT)
 - Sueyong Chung+ (FlatIron)
 - Ben Sorscher+ (Harvard)
 - JohnMark Taylor (Columbia)
-- Yingqi Rong (Johns Hopkins)
 - [The RSA ToolBox Team](https://github.com/rsagroup/rsatoolbox)
 - [The Brain-Score Team](https://www.brain-score.org/)
 - [The Net2Brain Team](https://github.com/cvai-roig-lab/Net2Brain)
+- [Himalaya (GallantLab)](https://gallantlab.org/himalaya/)
 - [The ThingsData Team](https://thingsvision.github.io/)
 - [The Allen Brain Institute](https://alleninstitute.org/)
 

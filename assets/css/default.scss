@@ -1,22 +1,8 @@
 ---
 ---
 
-$header-heading-color: white;
-$header-bg-color: rgba(0, 0, 0, 0.75);
-$header-bg-color-secondary: #FFF;
-
-$section-headings-color: black;
-$body-text-color: black !default;
-$body-link-color: #C41E3A !default;
-$blockquote-text-color: #999 !default;
-
-$border-color: #999 !default;
-$table-border-color: white !default;
-$hr-border-color: #999 !default;
-
-$code-text-color: black;
-
-@import 'jekyll-theme-cayman';
+@import 'xevariables';
+@import 'jekyll-cayman';
 
 .logo-container {
   margin: auto;
@@ -38,34 +24,34 @@ $code-text-color: black;
   }
 }
 
+abstract {
+  font-size: 0.90rem;
+}
+
+table > tr > td {
+  vertical-align: top;
+}
+
 .page-header {
   color: $header-heading-color;
   text-align: center;
+  
   background-color: $header-bg-color;
   background-image: url('../images/banner.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  // darken the background image
   background-blend-mode: darken;
 
   @include large {
-    padding: 2.5rem 6rem;
+    padding: 2.5rem 2rem;
   }
 
   @include medium {
-    padding: 2.5rem 4rem;
+    padding: 2rem 2rem;
   }
 
   @include small {
     padding: 2rem 1rem;
   }
-}
-
-td {
-  vertical-align: top;
-}
-
-abstract {
-  font-size: 0.90rem;
 }
