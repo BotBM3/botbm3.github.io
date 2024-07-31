@@ -18,7 +18,7 @@ All our speakers were prompted with the main, motivating question of the BOTBM3 
 
 # Positions Talks {#positions}
 
-The speakers in this series will be presenting overarching (convergent and divergent) perspectives on the first part of this question:
+The speakers in this part of the series will be presenting overarching (convergent and divergent) perspectives on the first part of this question:
 <br>&emsp;**What do we want from our metrics?**
 
 ## Talia Konkle
@@ -48,7 +48,7 @@ Where neuroscience once lacked high-performing computational models, we now have
 # Metrics Blitz {#metrics-blitz}
 
 The speakers in this part of the series will be presenting some of their responses to the second part of our primary motivating question:
-<br>&emsp;***How do we get what we want* from our metrics?**
+<br>&emsp;***How* do we get what we want from our metrics?**
 
 These talks in this section will showcase work on the shortcomings of current metrics; propositions for new (or improved) metrics; "meta" metrics or "auxiliary metrics" designed to address the shortcomings of current (first or second-order alignment) metrics; and more.
 
