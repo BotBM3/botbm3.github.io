@@ -24,7 +24,7 @@ The speakers in this part of the series will be presenting overarching (converge
 ## Talia Konkle
 Harvard University
 
-## Dan Yamins {#talia-konkle}
+## Dan Yamins
 Stanford University
 
 ### Accuracy (vs?) Seperability
@@ -39,6 +39,8 @@ Johns Hopkins University
 
 ### Learning from Universality
 
+&emsp;**:: Toward universal principles of neural representation**
+
 Where neuroscience once lacked high-performing computational models, we now have an overabundance in the form of deep neural networks. In fact, in many areas of cognitive neuroscience, there are so many high-performing models, that it has become difficult to discern which, if any, of these models is “right.”Standard metrics for model-brain similarity suggest that nearly all modern deep networks are good models of human brains. How can this be? Shouldn’t drastic differences in the construction of networks matter? Do we need better metrics to differentiate competing models? I will argue that attempting to adjudicate between existing deep networks should not be our primary focus. This is because at a fundamental level, these seemingly disparate networks are effectively the same—they have learned something universal. Our focus should be on understanding these universal representations and the principles that allow them to emerge under such highly diverse conditions. Doing so may reveal fundamental underlying mechanisms that abstract over many details of a network’s construction. Thus, the primary challenge that we face is not a need for better metrics but, rather, a need for better theories.
 
 </div>
@@ -52,6 +54,15 @@ The speakers in this part of the series will be presenting some of their respons
 
 These talks in this section will showcase work on the shortcomings of current metrics; propositions for new (or improved) metrics; "meta" metrics or "auxiliary metrics" designed to address the shortcomings of current (first or second-order alignment) metrics; and more.
 
+## Niko Kreigeskorte
+Columbia University
+
+### RSA + Controversiality
+
+&emsp;**:: Metrics and experimental designs should be optimized for model comparison**
+
+Theoretical progress in cognitive computational neuroscience requires model comparisons that are meaningful and powerful. A neural population code of a set of stimuli (or other mental representations that can be reliably elicited in an experiment) can be characterized by its representational geometry, as captured equivalently by a representational dissimilarity matrix (RDM) or a representational similarity (kernel) matrix. The similarity between two representations (e.g. a model layer and brain region) can be measured by choosing an RDM estimator (e.g. Euclidean, Mahalanobis, or crossnobis dissimilarity estimator) and an RDM comparator (e.g. rank correlation, Pearson correlation, cosine similarity, or whitened alternatives to the latter two). The whitened RDM cosine similarity can be understood as a generalization of the linear centered kernel alignment to unbiased representational distance estimators. The listed RDM comparators are representational similarity measures and are not metrics. Metric RDM comparators include the angle or Euclidean distance between normalized RDMs. The RSA3 Python Toolbox implements these options and supports model-comparative inference that can generalize simultaneously to the populations of subjects and stimuli. Importantly, we have a clear understanding of when and why to choose which combination of RDM comparator and RDM estimator (based on properties of the experiment and assumptions the researcher is willing to make). However, distinct neural network models implementing different computational mechanisms can predict similar representational geometries for randomly selected natural stimuli. To enable powerful model comparisons, we can optimize our experimental stimulus sets to elicit contrasting predictions from different models. We refer to such stimulus sets as controversial among the models. Controversial stimuli can be unconstrained (artificial, synthetic, e.g. optimizing image pixels) or constrained to various degrees (e.g. optimizing latents of a stimulus-generative model that defines a prior over stimulus space or selected from a set of natural stimuli), thus enabling us to transcend the dichotomy of natural versus artificial and subject our models to inferential comparisons that are both meaningful and powerful. 
+
 ## Jenelle Feather
 FlatIron Institute
 
@@ -63,12 +74,14 @@ The representations of neural networks are often compared to those of biological
 
 Deep neural network models of sensory systems are often proposed to learn representational transformations with invariances like those in the brain. To reveal these invariances, we generated ‘model metamers’, stimuli whose activations within a model stage are matched to those of a natural stimulus. Metamers for state-of-the-art supervised and unsupervised neural network models of vision and audition were often completely unrecognizable to humans when generated from late model stages, suggesting differences between model and human invariances. Targeted model changes improved human recognizability of model metamers but did not eliminate the overall human–model discrepancy. The human recognizability of a model’s metamers was well predicted by their recognizability by other models, suggesting that models contain idiosyncratic invariances in addition to those required by the task. Metamer recognizability dissociated from both traditional brain-based benchmarks and adversarial vulnerability, revealing a distinct failure mode of existing sensory models and providing a complementary benchmark for model assessment.
 
-## Niko Kreigeskorte
-Columbia University
+## Nina Miolane
+UC Santa Barbara
 
-### RSA Metrics 3.0
+### Geometric Statistics
 
-### Controversial Stimuli
+&emsp;**:: Exploring the Riemannian Geometry of Representation in Natural and Artificial Systems**
+
+Riemannian geometry is a mathematical theory used by Einstein to propose General Relativity, in which space-time is described as a four-dimensional space curved by the presence of mass and energy. Yet today, Riemannian geometry is being rediscovered with a completely new purpose. In computational neuroscience and artificial intelligence, researchers have started using it to understand the universe inside intelligent systems, i.e. inside humans and machines alike. How can the same theory both describe the outer universe and our inner world? In this talk, I will explore this question by narrating how both theoretical physicists and computational neuroscientists have converged to using Riemannian geometry to address how the world and the brain are linked through representation. I will present recent work from our lab in which we propose several methods to discover and interpret the geometry of neural manifolds, making steps towards the goal of developing a geometric theory of intelligent representation. I will conclude by introducing Geomstats, a fully-featured Python package for working with computations on the kinds of nonlinear manifolds I discuss throughout the talk.
 
 ## Imran Thobani
 Stanford University
@@ -79,12 +92,21 @@ Stanford University
 
 A fundamental question for computational neuroscience is how to assess neural response similarity between a mechanistic model and the brain. We propose to map models to brains using the same set of transforms that map animal subjects to each other for the same species and brain area. We show that identifying a good transform class requires taking aspects of the mechanism underlying the brain responses into account, specifically the non-linear activation function. We therefore introduce a transform class, Inverse-Linear-Nonlinear-Poisson (ILNP), that accounts for the effect of the biological activation function. On an electrophysiological dataset of 31 mouse subjects, ILNP increases same-area similarity scores across subjects compared to ridge regression and soft matching while maintaining inter-area separability. We also find that a transform class of this kind better differentiates between various models of the mouse visual stream with respect to brain predictivity, though for some model comparisons, soft matching does better. We hypothesize that integrating some neuron-level tuning properties into the mechanistic constraints of ILNP is a promising next step in characterizing a good inter-animal transform class in order to better assess model accuracy.
 
+### 
+
 ## Eghbal Hosseini
 Massachusetts Institute of Technology
 
 ### Controversial Selection
 
 Artificial neural networks (ANNs) have emerged as computational systems that align with behavior and underlying representations in biological neural networks (brains). Across domains, these feats are achieved by many different kinds of ANNs trained with ecologically valid objectives. Here we show that—akin to biological evolution where distinct organisms often converge on a similar solution to some target problem—models’ ability to predict brain responses is a consequence of convergence onto universal representational axes that are shared both across high-performing models and between models and brains. First, we introduce model agreement as a measure of representation universality across ANNs. Second, we use model agreement to modulate the degree of match between individual ANNs and the brain for the language and visual systems. Finally, we begin to identify core dimensions across models that distinguish between universal and model-specific representations.These results in tandem establish the universality of representation as a core component in the alignment between ANNs and biological systems, thus providing a novel approach for using ANNs to uncover representations and computations in biological brains.
+
+## Chris Z Wang
+Massachusetts Institute of Technology
+
+### Rethinking Reconstruction
+
+Stimulus reconstruction from brain activity has become a popular method in the probing of biological representation. When evaluating stimulus reconstruction results, it is tempting to assume that higher fidelity text and image generation is due to an improved understanding of the brain or more powerful signal extraction from neural recordings. However, in practice, new reconstruction methods could improve performance for at least three other reasons: learning more about the distribution of stimuli, becoming better at reconstructing text or images in general, or exploiting weaknesses in current image and/or text evaluation metrics. Here we disentangle how much of the reconstruction is due to these other factors vs. productively using the neural recordings. We introduce BrainBits, a method that uses a bottleneck to quantify the amount of signal extracted from neural recordings that is actually necessary to reproduce a method's reconstruction fidelity. We find that it takes surprisingly little information from the brain to produce reconstructions with high fidelity. In these cases, it is clear that the priors of the methods' generative models are so powerful that the outputs they produce extrapolate far beyond the neural signal they decode. Given that reconstructing stimuli can be improved independently by either improving signal extraction from the brain or by building more powerful generative models, improving the latter may fool us into thinking we are improving the former. We propose that methods should report a method-specific random baseline, a reconstruction ceiling, and a curve of performance as a function of bottleneck size, with the ultimate goal of using more of the neural recordings.
 
 ## Nathan Cloos
 Massachusetts Institute of Technology
