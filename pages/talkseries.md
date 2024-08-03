@@ -92,14 +92,19 @@ Stanford University
 
 A fundamental question for computational neuroscience is how to assess neural response similarity between a mechanistic model and the brain. We propose to map models to brains using the same set of transforms that map animal subjects to each other for the same species and brain area. We show that identifying a good transform class requires taking aspects of the mechanism underlying the brain responses into account, specifically the non-linear activation function. We therefore introduce a transform class, Inverse-Linear-Nonlinear-Poisson (ILNP), that accounts for the effect of the biological activation function. On an electrophysiological dataset of 31 mouse subjects, ILNP increases same-area similarity scores across subjects compared to ridge regression and soft matching while maintaining inter-area separability. We also find that a transform class of this kind better differentiates between various models of the mouse visual stream with respect to brain predictivity, though for some model comparisons, soft matching does better. We hypothesize that integrating some neuron-level tuning properties into the mechanistic constraints of ILNP is a promising next step in characterizing a good inter-animal transform class in order to better assess model accuracy.
 
-### 
-
 ## Eghbal Hosseini
 Massachusetts Institute of Technology
 
 ### Controversial Selection
 
 Artificial neural networks (ANNs) have emerged as computational systems that align with behavior and underlying representations in biological neural networks (brains). Across domains, these feats are achieved by many different kinds of ANNs trained with ecologically valid objectives. Here we show that—akin to biological evolution where distinct organisms often converge on a similar solution to some target problem—models’ ability to predict brain responses is a consequence of convergence onto universal representational axes that are shared both across high-performing models and between models and brains. First, we introduce model agreement as a measure of representation universality across ANNs. Second, we use model agreement to modulate the degree of match between individual ANNs and the brain for the language and visual systems. Finally, we begin to identify core dimensions across models that distinguish between universal and model-specific representations.These results in tandem establish the universality of representation as a core component in the alignment between ANNs and biological systems, thus providing a novel approach for using ANNs to uncover representations and computations in biological brains.
+
+## Vighnesh Subramaniam
+Massachusetts Institute of Technology
+
+### Hyperbolic RSA
+
+Current model-to-brain mappings use distance metrics that typically compare representations under the assumption that these representations lie in Euclidean space. While most deep neural networks encode representations in Euclidean spaces, such spaces are not well-equipped to encode hierarchical, structured features often found in visual or linguistic reasoning (e.g. object hierarchies or analogies). In this work, we incorporate new methods from NLP and computer vision that encode representations in hyperbolic space. These hyperbolic geometries provably encode tree structures and meaningfully represent the rich hierarchies captured by vision and linguistic reasoning alike. By working in Euclidean space, we are unable to uncover meaningful hierarchical structure in the brain using the current distance metrics. Therefore, in order to uncover these hierarchical structures, we propose a hyperbolic representational similarity analysis (RSA). This method uses hyperbolic distance formulations as a first-order distance metric over hyperbolic representations. As a first-order test of this method, we compare classic Euclidean RDMs and hyperbolic RDMs on language datasets constructed WordNet  (which do provide higher-order structure), showing that the two RDMs distinguish different features at low dimensions. We use these findings to motivate comparisons between to the brain to uncover hierarchical structure.
 
 ## Chris Z Wang
 Massachusetts Institute of Technology
