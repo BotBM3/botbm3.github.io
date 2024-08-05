@@ -92,6 +92,15 @@ Stanford University
 
 A fundamental question for computational neuroscience is how to assess neural response similarity between a mechanistic model and the brain. We propose to map models to brains using the same set of transforms that map animal subjects to each other for the same species and brain area. We show that identifying a good transform class requires taking aspects of the mechanism underlying the brain responses into account, specifically the non-linear activation function. We therefore introduce a transform class, Inverse-Linear-Nonlinear-Poisson (ILNP), that accounts for the effect of the biological activation function. On an electrophysiological dataset of 31 mouse subjects, ILNP increases same-area similarity scores across subjects compared to ridge regression and soft matching while maintaining inter-area separability. We also find that a transform class of this kind better differentiates between various models of the mouse visual stream with respect to brain predictivity, though for some model comparisons, soft matching does better. We hypothesize that integrating some neuron-level tuning properties into the mechanistic constraints of ILNP is a promising next step in characterizing a good inter-animal transform class in order to better assess model accuracy.
 
+## Brian Robinson
+Johns Hopkins University
+
+### Dimension-Wise CKA
+
+&emsp;**... Efficient dimension-wise similarity analysis reveals distinct brain-similarity subspaces in modern transformer networks**
+
+A prevailing approach in comparing representations in the brain to artificial neural network models is to subdivide model representations by layer. However, modern deep learning networks utilize a residual structure and can forgo explicit hierarchical inductive biases between layers (as in transformers), which complicates the choice of model layer as a primary subdivision for analysis. Here, we introduce an efficient metric based on linear centered kernel alignment (CKA), where brain-to-model similarity is measured for each model dimension within a model layer by measuring the relative effect size of removing that dimension. By applying this metric to model representations within the same layer, we find distinct representational subspaces of model dimensions that differ in their alignment with visual inputs, semantic content, early visual cortex, and higher-level occipital-temporal cortex. Furthermore, we apply dimension-wise CKA to combined representations across all model layers and find that the representational scores for early visual and occipital-temporal cortices are driven by a relatively small number of model dimensions in each layer and that the relevant dimensions span all network layers. In the future, dimension-wise CKA can be used as a tool to enable more detailed brain-to-model comparisons which consider within-layer representational heterogeneity.
+
 ## Eghbal Hosseini
 Massachusetts Institute of Technology
 

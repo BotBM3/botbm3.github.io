@@ -23,4 +23,6 @@ plugins:
 
 destination: _website/
 
+favicon: assets/images/favicon/gradient-96.png
+
 exclude: ['setup', 'code', '*draft', '*xylo*', 'README.md', 'Gemfile', 'Gemfile.lock']
