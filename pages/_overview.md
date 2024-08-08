@@ -3,6 +3,10 @@
 | **Date** | August 8th, 2024 (5:15-7:00pm EST) |
 | **Location** | [CCN 2024](https://2024.ccneuro.org/) @ [MIT](https://maps.app.goo.gl/iMAFxWPnewb4nBj57), Cambridge, MA, USA |
 
+## Event Q+A
+
+Please use this form to ask questions during the event: [Q+A Form](https://docs.google.com/forms/d/e/1FAIpQLSe076iws6o3ytwHt29LjGlN_HD_THv15KihMjWtJkud5Vzlrg/viewform). We will be synthesizing and summarizing these questions as they appear (with a little help from GPT).
+
 ## Question
 
 **What do we want from our model-to-brain mapping metrics and how do we get it?**
