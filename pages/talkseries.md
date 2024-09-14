@@ -24,6 +24,8 @@ The speakers in this part of the series will be presenting overarching (converge
 ## Talia Konkle
 Harvard University
 
+### The New Model Organism
+
 ## Dan Yamins
 Stanford University
 
